@@ -1,0 +1,75 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Remove exe file",
+            "type": "shell",
+            "command": "rm",
+            "args": [
+                "algorithm/${fileBasenameNoExtension}.exe"
+            ],
+            "dependsOrder": "sequence"
+        },
+        {
+            "type": "shell",
+            "label": "Compile C++17 for CP (TOPCYBERFLOWER)",
+            "command": "g++",
+            "args": [
+                "-std=c++17",
+                "-g",
+                "-O2",
+                "-D",
+                "__TOPCYBERFLOWER",
+                "algorithm/${fileBasenameNoExtension}.cpp",
+                "-o",
+                "algorithm/${fileBasenameNoExtension}.exe"
+            ]
+        },
+        {
+            "type": "shell",
+            "label": "Execution C++17 (TOPCYBERFLOWER)",
+            "command": "./algorithm/${fileBasenameNoExtension}.exe",
+            "args": [
+                "<",
+                "algorithm/input.txt",
+                ">",
+                "algorithm/output.txt"
+            ],
+        },
+        {
+            "label": "C++17 All in One (TOPCYBERFLOWER)",
+            "type": "shell",
+            "dependsOn": [
+                "Compile C++17 for CP (TOPCYBERFLOWER)",
+                "Execution C++17 (TOPCYBERFLOWER)",
+                "Remove exe file"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "Execution Python3 (TOPCYBERFLOWER)",
+            "command": [
+                "python"
+            ],
+            "args": [
+                "algorithm/${fileBasenameNoExtension}.py",
+                "<",
+                "algorithm/input.txt",
+                ">",
+                "algorithm/output.txt"
+            ],
+            "problemMatcher": [],
+            "group": "build"
+        }
+    ],
+}
