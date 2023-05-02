@@ -1,9 +1,14 @@
 
-# Haikus for Codespaces
+# CP for Codespaces
 
-This is a quick node project template for demoing Codespaces. It is based on the [Azure node sample](https://github.com/Azure-Samples/nodejs-docs-hello-world). It's great!!!
+This is a codespaces which I use for Competitive Programming.
 
-Point your browser to [Quickstart for GitHub Codespaces](https://docs.github.com/en/codespaces/getting-started/quickstart) for a tour of using Codespaces with this repo.
+It supports C++, Python3 with some useful shortcuts.
 
-# C++,Python shortcut by TOPCYBERFLOWER
-ctrl + shift + 5
+It also uses my template, which I explain at the below repo.
+
+[Visual-Code-Settings-For-Competitive-Programming](https://github.com/CyberFlower/Visual-Code-Settings-For-Competitive-Programming)
+
+## Shortcuts
+1. ctrl + alt + 5 : run tasks
+    * Run C++, python. You can add other languages by edit tasks.json
