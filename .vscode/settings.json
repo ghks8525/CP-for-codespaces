@@ -1,5 +1,7 @@
 {
     "files.associations": {
         "limits": "cpp"
-    }
+    },
+    //"editor.matchBrackets": "never",
+    "workbench.colorTheme": "GitHub Dark"
 }
