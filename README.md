@@ -10,5 +10,5 @@ It also uses my template, which I explain at the below repo.
 [Visual-Code-Settings-For-Competitive-Programming](https://github.com/CyberFlower/Visual-Code-Settings-For-Competitive-Programming)
 
 ## Shortcuts
-1. ctrl + alt + 5 : run tasks
+1. Tasks.runTask
     * Run C++, python. You can add other languages by edit tasks.json
